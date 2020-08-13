@@ -1,0 +1,12 @@
+<div class="container">
+<h1 class="text-center">Add a new cocktail</h1>
+
+<div class="row align-items-center justify-content-center card-new">
+  <div class="col-7 border card-new">
+    <%= simple_form_for(@cocktail) do |c| %>
+      <%= c.input :name, placeholder: "New cocktail..." %>
+      <%= c.submit "Create!", class: "btn" %>
+    <% end %>
+  </div>
+</div>
+</div>

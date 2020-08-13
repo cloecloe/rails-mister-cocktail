@@ -9,9 +9,19 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Manrope&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light">
+      <%= link_to "Cocktails", cocktails_path %>
+      <%= link_to "New Cocktail", new_cocktail_path %>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+
+      <%= yield %>
   </body>
 </html>
