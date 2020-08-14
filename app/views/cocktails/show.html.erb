@@ -1,10 +1,10 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))" <%= cloudinary_url(@cocktail.photo, :resource_type => :raw) %>>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @cocktail.photo.key, height: 200 %>);">
   <div class="banner-container">
     <h1><%= @cocktail.name %></h1>
   </div>
 </div>
 
-<div class="container my-20">
+<div class="container show-container">
   <div class="row justify-content-around m-10">
     <div class="col-6">
       <br>
