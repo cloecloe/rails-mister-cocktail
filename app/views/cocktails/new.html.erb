@@ -5,6 +5,7 @@
   <div class="col-7 border card-new">
     <%= simple_form_for(@cocktail) do |c| %>
       <%= c.input :name, placeholder: "New cocktail..." %>
+      <%= c.input :photo, as: :file %>
       <%= c.submit "Create!", class: "btn" %>
     <% end %>
   </div>

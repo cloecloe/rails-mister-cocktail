@@ -1,8 +1,17 @@
 .card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   background-color: #17706e;
   border: none !important;
+  margin: auto;
+  grid-template-rows: 100vh;
+}
+
+@media (min-width: 669px) {
+  .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .card-trip {
@@ -15,28 +24,17 @@
   border-radius: 3px;
 }
 
-.card-trip > img {
-  object-fit: cover;
-}
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
+.card-trip-infos {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  .far {
+    padding: 0 3px;
+  }
 }
 
 .card-new {

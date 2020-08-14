@@ -5,9 +5,12 @@
 <div class="card">
 <% @cocktails.each do |cocktail| %>
   <div class="card-trip">
-    <img src="https://source.unsplash.com/160x160/?cocktail" />
+      <%= image_tag cocktail.photo, height: 160, width: 160, class: "image" %>
     <div class="card-trip-infos">
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        <%= link_to cocktail_path(cocktail), method: :delete do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
     </div>
   </div>
 <% end %>
