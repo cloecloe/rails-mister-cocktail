@@ -22,7 +22,7 @@
       </ul>
     </div>
 
-      <div class="border p-5">
+      <div class="border p-5 form-dose">
         <%= simple_form_for [@cocktail, @dose] do |d| %>
           <%= d.association :ingredient %>
           <%= d.input :description %>
