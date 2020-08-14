@@ -1,10 +1,10 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/1500x200/?cocktail);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))" <%= cloudinary_url(@cocktail.photo, :resource_type => :raw) %>>
   <div class="banner-container">
     <h1><%= @cocktail.name %></h1>
   </div>
 </div>
 
-<div class="container">
+<div class="container my-20">
   <div class="row justify-content-around m-10">
     <div class="col-6">
       <br>
@@ -31,5 +31,4 @@
       </div>
     </div>
   </div>
-</div>
 <br>
